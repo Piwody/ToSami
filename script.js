@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const pantallaInicio = document.getElementById('pantalla-inicio');
+  const contenidoPrincipal = document.getElementById('contenido-principal');
+  const corazon = document.querySelector('.corazon');
+
+  // Mostrar contenido principal al tocar el corazón
+  if (corazon) {
+    corazon.addEventListener('click', () => {
+      if (pantallaInicio) pantallaInicio.classList.add('oculto');
+      if (contenidoPrincipal) contenidoPrincipal.classList.remove('oculto');
+    });
+  }
+
   const revelarBtn = document.getElementById('revelar-btn');
   const mensajeSecreto = document.getElementById('mensaje-secreto');
   const terminarBtn = document.getElementById('terminar-btn');
@@ -16,13 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mensajeTerminar) mensajeTerminar.classList.add('oculto');
     if (imagenAmor) imagenAmor.classList.add('oculto');
     if (imagenTriste) imagenTriste.classList.add('oculto');
-    limpiarImagenes(); // eliminar cualquier img previamente agregado
+    limpiarImagenes();
   }
 
   if (revelarBtn) {
     revelarBtn.addEventListener('click', () => {
       ocultarTodo();
-      // crear la imagen solo al hacer clic
       if (imagenAmor) {
         const img = document.createElement('img');
         img.src = 'images/amor.jpg';
@@ -38,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (terminarBtn) {
     terminarBtn.addEventListener('click', () => {
       ocultarTodo();
-      // crear la imagen solo al hacer clic
       if (imagenTriste) {
         const img = document.createElement('img');
         img.src = 'images/triste.jpg';

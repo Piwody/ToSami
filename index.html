@@ -6,38 +6,47 @@
     <title>💌 Un Mensaje Secreto para mi chiqui 💖</title>
     
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="card-wrapper">
-        <div class="carta-box">
-            <h1>Hoy es otro mes mas a tu lado mi Samarita!</h1>
+    <!-- Pantalla de presentación con corazón -->
+    <div id="pantalla-inicio" class="pantalla-inicio">
+        <div class="corazon-container">
+            <div class="corazon">❤️</div>
+            <p>Tocame</p>
+        </div>
+    </div>
 
-            <p>Desde que te conozco me has hecho muy feliz, gracias a ti mi vida ha mejorado mucho, tu presencia para mi lo es todo. Y aun que suene cursi mi mundo es mucho más brillante. Eres mi razón para sonreír, la persona que más me inspira y por la cual sigo adelante. Gracias por cada momento, por tu paciencia y por ser mi novia.</p>
+    <!-- Contenido principal (oculto al inicio) -->
+    <div id="contenido-principal" class="contenido-principal oculto">
+        <div class="card-wrapper">
+            <div class="carta-box">
+                <h1>Hoy es otro mes mas a tu lado mi Samarita!</h1>
 
-            <p>Quería regalarte algo hecho  aun que no sea escrito pero es mejor, espero que te guste este detallito que te hice ojo la sorperesa.</p>
+                <p>Desde que te conozco me has hecho muy feliz, gracias a ti mi vida ha mejorado mucho, tu presencia para mi lo es todo. Y aun que suene cursi mi mundo es mucho más brillante. Eres mi razón para sonreír, la persona que más me inspira y por la cual sigo adelante. Gracias por cada momento, por tu paciencia y por ser mi novia.</p>
 
-            <button id="revelar-btn">Toque aqui si me amas</button>
-            <button id="terminar-btn">Toque aqui si NO me amas</button>
+                <p>Quería regalarte algo hecho con mis propias manos aun que no sea escrito pero es mejor, espero que te guste este detallito que te hice.</p>
 
-            <div id="imagen-amor" class="oculto">
-                <!-- imagen agregada dinámicamente desde script.js -->
+                <button id="revelar-btn">Toque aqui si me amas</button>
+                <button id="terminar-btn">Toque aqui si NO me amas</button>
+
+                <div id="imagen-amor" class="oculto">
+                    <!-- imagen agregada dinámicamente desde script.js -->
+                </div>
+
+                <div id="imagen-triste" class="oculto">
+                    <!-- imagen agregada dinámicamente desde script.js -->
+                </div>
+
+                <p id="mensaje-secreto" class="oculto">
+                    EEEEE si tocaste este boton y eso firma si quiera un año mas a mi lado, bendición o maldición? sjsjsjs mentira. Mi amor te quiero agradecer mucho por todo se que estos dias- meses han sido poco duros y dificiles pero ambos sabemos que nos vamos a recuperar y como te he dicho somo un equipo, gracias por todo estos años alado mio y por lo que nos quedan siempre y cuando tu me lo permitas, eres y seras la mujer por la cual daria todo aparte de mi madre pero es enserio que digo que si me lo permites en 4 años que me faltan apenas salga te dare lo que me dijiste y en 9 ya sabemos los dos, besito mi amor te amo muchooooooo y no hay palabras para describirlo. ❤️ 😘
+                </p>
+
+                <p id="mensaje-terminar" class="oculto">
+                    Listo terminamos, deley le quieres a el, chao, que les vaya bien duren sapos  😢
+                </p>
+
             </div>
-
-            <div id="imagen-triste" class="oculto">
-                <!-- imagen agregada dinámicamente desde script.js -->
-            </div>
-
-            <p id="mensaje-secreto" class="oculto">
-             EEEEE si tocaste este boton y eso firma si quiera un año mas a mi lado, bendición o maldición? sjsjsjs mentira. Mi amor te quiero agradecer mucho por todo se que estos dias- meses han sido poco duros y dificiles pero ambos sabemos que nos vamos a recuperar y como te he dicho somo un equipo, gracias por todo estos años alado mio y por lo que nos quedan siempre y cuando tu me lo permitas, eres y seras la mujer por la cual daria todo aparte de mi madre pero es enserio que digo que si me lo permites en 4 años que me faltan apenas salga te dare lo que me dijiste y en 9 ya sabemos los dos, besito mi amor te amo muchooooooo y no hay palabras para describirlo. ❤️ 
-
-             😘
-            </p>
-
-            <p id="mensaje-terminar" class="oculto">
-                Listo terminamos, deley le quieres a el, chao, que les vaya bien duren sapos  😢
-            </p>
-
         </div>
     </div>
     

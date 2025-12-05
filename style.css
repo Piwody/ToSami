@@ -81,11 +81,19 @@ p {
     animation: fadeIn 2s forwards;
 }
 
+#mensaje-secreto,
+#mensaje-terminar {
+    font-family: 'Lora', serif !important;
+    font-size: 1.2em;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #e91e63;
+}
+
 #mensaje-secreto:not(.oculto),
 #mensaje-terminar:not(.oculto) {
-    color: #e91e63;
-    font-weight: bold;
-    font-style: italic;
+    display: block;
+    animation: fadeIn 2s forwards;
 }
 
 /* Definición de la animación de aparición */
@@ -127,4 +135,67 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   animation: fadeIn 2s forwards;
+}
+
+/* Pantalla de inicio con corazón */
+.pantalla-inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 0.5s forwards 3s;
+}
+
+.pantalla-inicio.oculto {
+    display: none !important;
+}
+
+.corazon-container {
+    text-align: center;
+}
+
+.corazon {
+    font-size: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: latido 1.5s ease-in-out infinite;
+}
+
+.corazon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(233, 30, 99, 0.6));
+}
+
+.corazon-container p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    color: #e91e63;
+    margin-top: 20px;
+}
+
+/* Animación de latido del corazón */
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Contenido principal */
+.contenido-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+    animation: fadeIn 0.5s ease-in forwards 0.5s;
+    opacity: 0;
+}
+
+.contenido-principal.oculto {
+    display: none !important;
 }
