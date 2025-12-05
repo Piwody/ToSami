@@ -1,0 +1,130 @@
+/* Importamos la fuente elegante */
+body {
+    font-family: 'Dancing Script', cursive; /* Fuente elegante */
+    background-color: #fce4ec; /* Rosa muy suave, como un papel antiguo */
+    color: #4a148c; /* Morado intenso para el texto */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* cambiado: permite que el contenido empiece arriba y la página sea desplazable */
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla del celular */
+    padding: 40px 20px 80px; /* más espacio arriba/abajo para mejor scroll/espaciado */
+    box-sizing: border-box;
+    position: relative;
+    /* se eliminó `overflow: hidden;` para permitir el desplazamiento vertical */
+}
+
+
+
+.card-wrapper {
+    /* Estilo para que la carta se vea como una caja flotante */
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 40px; /* añade espacio al final para poder hacer scroll hasta abajo */
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #e91e63; /* Color rosa/rojo vibrante */
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la firma */
+.firma {
+    font-size: 1.2em;
+    margin-top: 40px;
+    border-top: 1px dashed #e91e63;
+    padding-top: 15px;
+}
+
+/* Estilo del botón */
+#revelar-btn {
+    background-color: #ff4081; /* Rosa fuerte */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+#revelar-btn:hover {
+    background-color: #e91e63;
+}
+
+/* Clase para ocultar el mensaje al inicio */
+.oculto {
+    display: none !important;
+}
+
+/* Cuando se remueve la clase oculto, mostrar el elemento */
+#imagen-amor:not(.oculto),
+#imagen-triste:not(.oculto),
+#mensaje-secreto:not(.oculto),
+#mensaje-terminar:not(.oculto) {
+    display: block;
+    animation: fadeIn 2s forwards;
+}
+
+#mensaje-secreto:not(.oculto),
+#mensaje-terminar:not(.oculto) {
+    color: #e91e63;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Definición de la animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4081;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-top: 12px;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e91e63;
+}
+
+#terminar-btn {
+  background: #ff4081;
+}
+
+/* Estilo para las imágenes */
+#imagen-amor, #imagen-triste {
+  margin-top: 30px;
+}
+
+#imagen-amor img, #imagen-triste img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s forwards;
+}
